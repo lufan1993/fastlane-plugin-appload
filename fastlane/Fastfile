@@ -1,0 +1,10 @@
+lane :test do
+  appload(appload_image_file: 'spec/fixtures/Themoji.png',
+    appload_devices: [:ipad, :iphone, :ios_marketing, :watch, :watch_marketing])
+end
+
+lane :android do
+  android_appload(appload_image_file: 'spec/fixtures/Themoji.png',
+    appload_devices: [:phone, :tablet],
+    appload_path: 'app/res/mipmap')
+end
